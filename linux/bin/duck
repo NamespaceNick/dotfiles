@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+search=""
+echo "Searching DuckDuckGo for \"$@\""
+for term in $@; do
+  search="$search+$term"
+done
+xdg-open "https://duckduckgo.com/?q=$search"
