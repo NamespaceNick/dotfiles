@@ -2,6 +2,7 @@
 cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master
+export HOME=$HOME
 
 function doIt() {
 	rsync --exclude ".git/" \

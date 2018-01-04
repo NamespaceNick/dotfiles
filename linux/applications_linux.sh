@@ -3,7 +3,7 @@
 # NOTE: Run this script with sudo priveleges
 
 firefox=true
-spotify=true
+spotify=false # Normally parallels, so unnecessary
 
 # TODO
 

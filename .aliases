@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 # Core aliases
+#alias vim="/usr/local/bin/vim"
+#alias vi="/usr/local/bin/vim"
 #alias vim="nvim"
 #alias vi="nvim"
 alias rm="rm -i"
