@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+# Core aliases
+#alias vim="nvim"
+#alias vi="nvim"
+alias rm="rm -i"
+
+# Easier navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias l="ls -a"
+alias lsa="ls -a"
+alias lsl="ls -l"
+alias dt="cd ~/Desktop"
+alias dl="cd ~/Downloads"
+alias dv="cd ~/developer"
+
+# Allow aliases to be sudo'ed
+alias sudo='sudo '
+
+# Always enable colored `grep` output
+alias grep='grep --color=auto'
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+# Mac aliases
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # Proper C++ compilation
+  #TODO: Forward slash might mess this up?
+  alias afk="/System/Library/CoreServices/\
+    Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+  alias g++='g++ --std=c++1z'
+  alias p='/usr/local/bin/python3.6'
+  alias python='/usr/local/bin/python3.6'
+
+  # Volume control
+  alias stfu="osascript -e 'set volume output muted true'"
+  alias pumpitup="osascript -e 'set volume output volume 100'"
+
+  # Hide/show all desktop icons
+  alias hidedesktop="defaults write com.apple.finder CreateDesktop \
+    -bool false && killall Finder"
+  alias showdesktop="defaults write com.apple.finder CreateDesktop \
+    -bool true && killall Finder"
+
+# Linux aliases
+elif [ "$OSTYPE" == 'linux-gnu' ]; then
+  # Proper C++ compilation
+  alias p='python'
+  alias g++='g++ --std=c++11'
+  alias pbcopy='xsel --clipboard --input'
+  alias pbpaste='xsel --clipboard --output'
+else
+  echo "WARNING::Unrecognized OS::$OSTYPE"
+fi
+
+
+
