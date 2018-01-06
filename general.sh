@@ -3,7 +3,7 @@
 # Script to install programs and tools that are necessary for both linux
 # and Mac
 
-# Scripts for the Home directory
+# Actions for the Home directory
 pushd ~/
 
 git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it

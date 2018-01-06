@@ -1,36 +1,30 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
+#!/usr/bin/env bash
+# Bash configuration for all machines
 
-# Get Bakke theme
+###########################################################################
+#                           TOP-LEVEL                                     #
+###########################################################################
+# PATH
+export PATH="$HOME/bin:$PATH"
 
-unset file;
-# Case insensitive globbing (used in pathname expansion)
-shopt -s nocaseglob;
-# Append to the Bash history file, rather than overwriting it
+# Bash-it
+
+# Bash settings
 shopt -s histappend
-# Autocorrect typos in path names when using `cd`
-shopt -s cdspell;
+shopt -s nocaseglob
+shopt -s cdspell
 
-# Enable some Bash 4 features when possible:
-# & `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
-# * Recursive globbing, e.g. `echo **/*.txt`
-for option in autocd globstar; do
-  shopt -s "$option" 2> /dev/null;
-done;
-
-# Add tab completion for many Bash commands
-if which brew &> /dev/null && \
-  [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
-  source "$(brew --prefix)/share/bash-completion/bash_completion";
-fi;
+# `ls` colors
+  # Directories blue
+  # Executables red
+LS_COLORS=$LS_COLORS:'di=4;34:ex=0;31:' ; export LS_COLORS
 
 declare -a sourcing=(
-                      ".path"                     # Path configuration
-                      ".bash_prompt"              # Bash prompt
+#                     ".path"                     # Path configuration
+#                     ".bash_prompt"              # Bash prompt
                       ".extra"                    # Misc configurations
                       ".aliases"                  # Bash aliases
                       ".bash_functions"           # Bash functions
-                      ".local/bin/bashmarks.sh"   # Bashmarks plugin
                     )
 
 for file in "${sourcing[@]}"
@@ -42,19 +36,15 @@ do
   fi
 done
 
+
 ###########################################################################
-#                           PLUGINS                                       #
+#                             PLUGINS                                     #
 ###########################################################################
 
-# Bash-git-prompt
-if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
-  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
-fi
-
-# Bashmarks
-source ~/.local/bin/bashmarks.sh
+GIT_PROMPT_ONLY_IN_REPO=1
+source ~/.bash-git-prompt/gitprompt.sh
 
 
-# Add Cargo to path
+
+# Final processes
 export PATH="$HOME/.cargo/bin:$PATH";
