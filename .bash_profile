@@ -7,7 +7,10 @@
 # PATH
 export PATH="$HOME/bin:$PATH"
 
-# Bash-it
+# Ensure new dotfiles are updated
+pushd $HOME/developer/dotfiles
+git pull origin master
+popd
 
 # Bash settings
 shopt -s histappend
