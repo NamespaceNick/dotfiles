@@ -10,14 +10,11 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias l="ls -a"
-alias lsa="ls -a"
-alias lsl="ls -l"
+alias te="cd ~/developer/testing/test-files/"
 alias dt="cd ~/Desktop"
 alias dl="cd ~/Downloads"
 alias dv="cd ~/developer"
-alias para="cd ~/Desktop/Parallels\ Shared\ Folders/parallels-sharing/"
-
+alias rpr="cd ~/developer/parallels-sharing/practice/rust/"
 
 # Allow aliases to be sudo'ed
 alias sudo='sudo '
@@ -25,11 +22,20 @@ alias sudo='sudo '
 # Always enable colored `grep` output
 alias grep='grep --color=auto'
 
+# Lock the screen (going AFK)
+
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-# Mac aliases
+# Rust compilation
+alias r="rustc "
+
+# Mac-specific aliases
 if [[ "$OSTYPE" == "darwin"* ]]; then
+  # Ls colors
+  alias l="ls -a"
+  alias lsa="ls -a"
+  alias lsl="ls -l"
   # Proper C++ compilation
   #TODO: Forward slash might mess this up?
   alias afk="/System/Library/CoreServices/\
@@ -38,19 +44,17 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   alias p='/usr/local/bin/python3.6'
   alias python='/usr/local/bin/python3.6'
 
-  # Volume control
-  alias stfu="osascript -e 'set volume output muted true'"
-  alias pumpitup="osascript -e 'set volume output volume 100'"
-
   # Hide/show all desktop icons
-  alias hidedesktop="defaults write com.apple.finder CreateDesktop \
-    -bool false && killall Finder"
-  alias showdesktop="defaults write com.apple.finder CreateDesktop \
-    -bool true && killall Finder"
+  alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+  alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
-# Linux aliases
 elif [ "$OSTYPE" == 'linux-gnu' ]; then
+  alias l="ls --color=auto -a"
+  alias ls="ls --color=auto"
+  alias lsa="ls --color=auto -a"
+  alias lsl="ls --color=auto -l"
   # Proper C++ compilation
+
   alias p='python'
   alias g++='g++ --std=c++11'
   alias pbcopy='xsel --clipboard --input'
