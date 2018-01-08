@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-# .bashrc for Parallels configuration
-export BASH_IT="/home/parallels/.bash_it"
-export $NO_BASHRC_SOURCED=false
-
