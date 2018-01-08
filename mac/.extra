@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Miscellaneous activities for specific machines
+
+# Label for bash prompt
+MACHINE_NAME=Macbook; export MACHINE_NAME
+
+# Bash-Git-Prompt location
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+fi

@@ -17,12 +17,20 @@ shopt -s cdspell
 # `ls` colors
   # Directories blue
   # Executables red
-LS_COLORS=$LS_COLORS:'di=4;34:ex=0;31:' ; export LS_COLORS
+  # Symlinks purple
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  export CLICOLOR=1
+  export LSCOLORS=gxfxhxDxbxhxhxhxhxcxcx
+else
+  LS_COLORS=$LS_COLORS:'di=4;34:ex=0;31:' ; export LS_COLORS
+fi
 
+# Source necessary files
 declare -a sourcing=(
 #                     ".path"                     # Path configuration
 #                     ".bash_prompt"              # Bash prompt
                       ".extra"                    # Misc configurations
+                      ".profile"                  # Command prompt
                       ".aliases"                  # Bash aliases
                       ".bash_functions"           # Bash functions
                     )
