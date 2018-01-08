@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+for file in test-directory/*
+do
+  echo $file
+done
+
