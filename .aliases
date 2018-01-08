@@ -49,10 +49,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 elif [ "$OSTYPE" == 'linux-gnu' ]; then
-  alias l="ls --color=auto -a"
+  alias l="ls -a --color=auto"
   alias ls="ls --color=auto"
-  alias lsa="ls --color=auto -a"
-  alias lsl="ls --color=auto -l"
+  alias lsa="ls -a --color=auto"
+  alias lsl="ls --color=auto -al"
   # Proper C++ compilation
 
   alias p='python'
