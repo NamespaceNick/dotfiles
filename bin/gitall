@@ -1,16 +1,19 @@
 #!/usr/bin/env bash
 # Quick git add, commit, and pushing
 
-git add .
+set +x
+git add -A
 if [ "$1" == "-f" ]; then
-  git commit -m \""$2"\"
-  git push -A
+  shift
+  echo "$@"
+  git commit -m "$@"
+  git push
 else
-  git commit -m '$@'
+  git commit -m \""$@"\"
   echo "Would you like to push? [y/N]"
   read response
   if [ "$response" == "Y" -o "$response" == "y" ]; then
-    git push -A
+    git push
   fi
 fi
 

@@ -3,7 +3,8 @@ if [ -z ${MACHINE_NAME+x} ] ; then
 fi
 
 # Bash prompt
-  # <\n><[machine name]> <pwd-yellow>
+  # <\n>
+  # <[machine name]> <pwd-yellow>
   # <→ >
 export PS1="\n[$MACHINE_NAME] \[\e[33m\]\w\[\e[m\] \n→ "
 
