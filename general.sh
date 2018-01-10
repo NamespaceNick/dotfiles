@@ -7,6 +7,7 @@
 pushd ~/
 
 ln -s $HOME/.vim/.vimrc
+ln -s $HOME/developer/dotfiles/bin $HOME/bin
 
 
 # /$HOME --> /dotfiles

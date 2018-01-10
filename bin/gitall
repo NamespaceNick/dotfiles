@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 # Quick git add, commit, and pushing
 
-set +x
 git add -A
 if [ "$1" == "-f" ]; then
   shift
-  echo "$@"
   message="$@"
   git commit -m "$message"
   git push
