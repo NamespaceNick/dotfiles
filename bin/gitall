@@ -6,7 +6,8 @@ git add -A
 if [ "$1" == "-f" ]; then
   shift
   echo "$@"
-  git commit -m "$@"
+  message="$@"
+  git commit -m "$message"
   git push
 else
   git commit -m \""$@"\"
