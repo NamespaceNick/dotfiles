@@ -7,6 +7,7 @@
 # PATH
 export PATH="$HOME/bin:$PATH"
 
+
 # Ensure new dotfiles are updated
 pushd $HOME/developer/dotfiles
 git pull origin master

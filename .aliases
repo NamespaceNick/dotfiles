@@ -4,13 +4,14 @@
 #alias vim="nvim"
 #alias vi="nvim"
 alias rm="rm -i"
+alias caenssh="ssh ndwill@oncampus-course.engin.umich.edu"
 
 # Easier navigation
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias te="cd ~/developer/testing/test-files/"
+alias te="pushd ~/developer/testing/test-files/"
 alias dt="cd ~/Desktop"
 alias dl="cd ~/Downloads"
 alias dv="cd ~/developer"
