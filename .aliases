@@ -5,6 +5,7 @@
 #alias vi="nvim"
 alias rm="rm -i"
 alias caenssh="ssh ndwill@oncampus-course.engin.umich.edu"
+alias submit370="/afs/umich.edu/class/eecs370/bin/submit370"
 
 # Easier navigation
 alias ..="cd .."
