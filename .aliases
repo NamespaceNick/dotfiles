@@ -5,6 +5,9 @@
 #alias vi="nvim"
 alias rm="rm -i"
 alias caenssh="ssh ndwill@oncampus-course.engin.umich.edu"
+alias amazon="cd /Users/nico/developer/practice/interview-questions"
+alias update="source ~/.bash_profile"
+alias diff="/usr/bin/diff"
 
 # Easier navigation
 alias ..="cd .."
@@ -63,6 +66,3 @@ elif [ "$OSTYPE" == 'linux-gnu' ]; then
 else
   echo "WARNING::Unrecognized OS::$OSTYPE"
 fi
-
-
-
