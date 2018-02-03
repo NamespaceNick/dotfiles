@@ -8,3 +8,5 @@ fi
   # <→ >
 export PS1="\n[$MACHINE_NAME] \[\e[33m\]\w\[\e[m\] \n→ "
 
+
+export PATH="$HOME/.cargo/bin:$PATH"

@@ -2,6 +2,7 @@
 
 # Script to install programs and tools that are necessary for both linux
 # and Mac
+install=true
 
 # /dotfiles --> /$HOME
 pushd ~/
@@ -22,8 +23,21 @@ declare -a to_move=(
                     ".vim"
                     )
 
-for file in "${to_move[@]}"
-do
-  ln -s $HOME/developer/dotfiles/$file $HOME
-done
+if $install ; then
+  for file in "${to_move[@]}"
+  do
+    ln -s $HOME/developer/dotfiles/$file $HOME
+  done
+else
+  mkdir $HOME/old-dotfiles
+  for file in "${to_move[@]}"
+  do
+    mv $HOME/$file $HOME/old-dotfiles
+  done
+  mv $HOME/.vimrc $HOME/old-dotfiles
+  mv $HOME/.vim $HOME/old-dotfiles
+  mv $HOME/bin $HOME/old-dotfiles
+
+fi
+
                     
