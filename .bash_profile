@@ -17,6 +17,7 @@ popd
 shopt -s histappend
 shopt -s nocaseglob
 shopt -s cdspell
+HISTSIZE=-1
 
 # `ls` colors
   # Directories blue

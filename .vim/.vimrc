@@ -16,7 +16,6 @@ Plug 'rust-lang/cargo'
 Plug 'lervag/vimtex'
 Plug 'vim-syntastic/syntastic'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-markdown'
 Plug 'JamshedVesuna/vim-markdown-preview'
