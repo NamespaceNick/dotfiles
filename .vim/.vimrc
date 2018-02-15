@@ -34,6 +34,8 @@ filetype plugin indent on
 set background=dark
 let g:solarized_termcolors=16
 let g:solarized_italic=1
+let s:terminal_italic=1
+let t:solarized_italic_in_terminal=1
 colorscheme solarized
 
 let g:livepreview_previewer = 'open -a Preview'
