@@ -6,7 +6,7 @@
 ###########################################################################
 # PATH
 export PATH="$HOME/bin:$PATH"
-
+export EDITOR="vim"
 
 # Ensure new dotfiles are updated
 pushd $HOME/developer/dotfiles
