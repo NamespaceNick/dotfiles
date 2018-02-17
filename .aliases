@@ -7,7 +7,7 @@ alias caenssh="ssh ndwill@oncampus-course.engin.umich.edu"
 alias update="source ~/.bash_profile"
 alias submit370="/afs/umich.edu/class/eecs370/bin/submit370"
 alias unity="cd ~/Documents/Unity/1.\ Projects"
-alias dotfiles="pushd ~/developer/dotfiles/"
+alias dotfiles="cd ~/developer/dotfiles/"
 alias vimrc="vi ~/.vimrc"
 
 # Easier navigation
@@ -19,7 +19,6 @@ alias te="pushd ~/developer/testing/test-files/"
 alias dt="cd ~/Desktop"
 alias dl="cd ~/Downloads"
 alias dv="cd ~/developer"
-alias rpr="cd ~/developer/parallels-sharing/practice/rust/"
 
 # Allow aliases to be sudo'ed
 alias sudo='sudo '
