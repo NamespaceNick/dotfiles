@@ -3,12 +3,12 @@
 # Core aliases
 #alias vim="nvim"
 #alias vi="nvim"
-alias rm="rm -i"
 alias caenssh="ssh ndwill@oncampus-course.engin.umich.edu"
 alias update="source ~/.bash_profile"
 alias submit370="/afs/umich.edu/class/eecs370/bin/submit370"
 alias unity="cd ~/Documents/Unity/1.\ Projects"
 alias dotfiles="pushd ~/developer/dotfiles/"
+alias vimrc="vi ~/.vimrc"
 
 # Easier navigation
 alias ..="cd .."

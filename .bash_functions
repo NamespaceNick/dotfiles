@@ -4,3 +4,7 @@
 function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
+
+function rm() {
+  echo "Removing"
+}
