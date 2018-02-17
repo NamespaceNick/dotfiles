@@ -3,6 +3,7 @@
 
 # Label for bash prompt
 MACHINE_NAME=Macbook; export MACHINE_NAME
+export TEMPTRASH="$HOME/.Trash"
 
 alias projects="cd /Users/nico/academic/eecs370/projects/"
 
