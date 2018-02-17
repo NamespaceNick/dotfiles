@@ -2,17 +2,22 @@
 
 # Script to install programs and tools that are necessary for both linux
 # and Mac
-install=true
+while true; do
+  read -p "Would you like to overwrite all \
+    relevant dotfiles and directories? [y/n] " overwrite
 
-# /dotfiles --> /$HOME
-pushd ~/
+  case "$overwrite" in
+    [Yy]* ) overwrite=true; break;;
+    [Nn]* ) overwrite=false; break;;
+    * ) echo "Please enter yes or no.";;
+  esac
+done
 
-ln -s $HOME/.vim/.vimrc
-ln -s $HOME/developer/dotfiles/bin $HOME/bin
 
-
-# /$HOME --> /dotfiles
-popd
+pushd ~/                                  # /dotfiles --> /$HOME
+ln -s `pwd`/.vimrc $HOME
+                                          # TODO: Add the bin directory to the home directory
+popd                                      # /$HOME --> /dotfiles
 
 # Create symlink to all files
 declare -a to_move=(
@@ -20,24 +25,26 @@ declare -a to_move=(
                     ".bash_functions"
                     ".bash_profile"
                     ".profile"
-                    ".vim"
                     )
 
-if $install ; then
+
+if $overwrite; then
   for file in "${to_move[@]}"
   do
+    find "$file" -maxdepth 0 -delete
     ln -s $HOME/developer/dotfiles/$file $HOME
   done
 else
   mkdir $HOME/old-dotfiles
   for file in "${to_move[@]}"
   do
-    mv $HOME/$file $HOME/old-dotfiles
+    if find "$file" -maxdepth 0; then
+      mv $HOME/$file $HOME/old-dotfiles/
+    fi
   done
-  mv $HOME/.vimrc $HOME/old-dotfiles
-  mv $HOME/.vim $HOME/old-dotfiles
-  mv $HOME/bin $HOME/old-dotfiles
-
 fi
 
-                    
+read -p "Enter the name you would like for this machine (Prompt display): "\
+  machine_name
+
+echo "MACHINE_NAME=$machine_name; export MACHINE_NAME" > $HOME/.extra
