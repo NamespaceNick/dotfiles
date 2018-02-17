@@ -8,6 +8,13 @@ set nocompatible
 filetype off
 
 " Plugins
+" If Vim.plug is not already installed
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin()
 
 Plug 'altercation/vim-colors-solarized'
@@ -34,8 +41,6 @@ filetype plugin indent on
 set background=dark
 let g:solarized_termcolors=16
 let g:solarized_italic=1
-let s:terminal_italic=1
-let t:solarized_italic_in_terminal=1
 colorscheme solarized
 
 let g:livepreview_previewer = 'open -a Preview'
