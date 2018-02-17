@@ -16,7 +16,10 @@ done
 
 pushd ~/                                  # /dotfiles --> /$HOME
 ln -s `pwd`/.vimrc $HOME
-                                          # TODO: Add the bin directory to the home directory
+                                          # TODO: Add the bin directory to the 
+                                          # home directory
+git clone \
+  https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
 popd                                      # /$HOME --> /dotfiles
 
 # Create symlink to all files
