@@ -5,10 +5,10 @@
 #alias vi="nvim"
 alias rm="rm -i"
 alias caenssh="ssh ndwill@oncampus-course.engin.umich.edu"
-alias amazon="cd /Users/nico/developer/practice/interview-questions"
 alias update="source ~/.bash_profile"
-alias diff="/usr/bin/diff"
 alias submit370="/afs/umich.edu/class/eecs370/bin/submit370"
+alias unity="cd ~/Documents/Unity/1.\ Projects"
+alias dotfiles="pushd ~/developer/dotfiles/"
 
 # Easier navigation
 alias ..="cd .."
