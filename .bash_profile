@@ -9,10 +9,6 @@ export PATH="$HOME/bin:$PATH"
 export EDITOR="vim"
 
 # Ensure new dotfiles are updated
-pushd $HOME/developer/dotfiles
-git pull origin master
-popd
-
 # Bash settings
 shopt -s histappend
 shopt -s nocaseglob
