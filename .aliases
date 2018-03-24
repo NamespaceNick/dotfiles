@@ -9,6 +9,7 @@ alias submit370="/afs/umich.edu/class/eecs370/bin/submit370"
 alias unity="cd ~/Documents/Unity/1.\ Projects"
 alias dotfiles="cd ~/developer/dotfiles/"
 alias vimrc="vi ~/.vimrc"
+alias learn="vi ~/developer/learn"
 
 # Easier navigation
 alias ..="cd .."
