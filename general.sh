@@ -2,16 +2,11 @@
 
 # Script to install programs and tools that are necessary for both linux
 # and Mac
-while true; do
-  read -p "Would you like to overwrite all \
-    relevant dotfiles and directories? [y/n] " overwrite
 
-  case "$overwrite" in
-    [Yy]* ) overwrite=true; break;;
-    [Nn]* ) overwrite=false; break;;
-    * ) echo "Please enter yes or no.";;
-  esac
-done
+read -p "This program will overwrite all relevant dotfiles and directories. \
+  Are you sure you want to continue? [y/n] " BEGIN
+
+
 
 
 pushd ~/                                  # /dotfiles --> /$HOME
