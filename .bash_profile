@@ -9,9 +9,9 @@ export PATH="$HOME/bin:$PATH"
 export EDITOR="vim"
 
 # Ensure new dotfiles are updated
-pushd $HOME/developer/dotfiles
-git pull origin master
-popd
+# pushd $HOME/developer/dotfiles
+# git pull origin master
+# popd
 
 # Bash settings
 shopt -s histappend
@@ -20,8 +20,7 @@ shopt -s cdspell
 HISTSIZE=-1
 
 # `ls` colors
-  # Directories blue
-  # Executables red
+  # Directories blue # Executables red
   # Symlinks purple
 if [[ "$OSTYPE" == "darwin"* ]]; then
   export CLICOLOR=1
