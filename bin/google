@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+QUERY=""
+
+echo "Googling: \"$@\""
+for term in $@
+do
+  QUERY="$QUERY+$term"
+done
+xdg-open "http://www.google.com/search?q=$QUERY"
+
