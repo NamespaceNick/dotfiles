@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
+# Program aliases
+alias tmux="$HOME/bin/tmux"
+alias vimrc="vi ~/.vimrc"
+alias vi="vim"
+
 # Core aliases
 alias update="source ~/.bash_profile"
 alias submit370="/afs/umich.edu/class/eecs370/bin/submit370"
 alias dotfiles="cd ~/developer/dotfiles/caen/"
-alias vimrc="vi ~/.vimrc"
-alias vi="vim"
 
 # Easier navigation
 alias ..="cd .."
