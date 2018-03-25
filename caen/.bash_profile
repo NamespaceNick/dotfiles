@@ -2,10 +2,32 @@
 # Bash configuration for all machines
 
 ###########################################################################
+#                        NECESSARY FUNCTIONS                              #
+###########################################################################
+
+pathappend() {
+  for ARG in "$@"
+  do
+    if [ -d "$ARG" ] && [[ ":$PATH:" != *":$ARG:"* ]]; then
+      PATH="${PATH:+"$PATH:"}$ARG"
+    fi
+  done
+}
+
+pathprepend() {
+  for ((i=$#; i>0; i--))
+  do
+    ARG=${!i}
+    if [ -d "$ARG" ] && [[ ":$PATH:" != *":$ARG:"* ]]; then
+      PATH="$ARG${PATH:+":$PATH"}"
+    fi
+  done
+}
+###########################################################################
 #                           TOP-LEVEL                                     #
 ###########################################################################
 # PATH
-export PATH="$HOME/bin:$PATH"
+pathprepend $HOME/bin
 export EDITOR="vim"
 
 # Ensure new dotfiles are updated
@@ -27,8 +49,6 @@ fi
 
 # Source necessary files
 declare -a sourcing=(
-#                     ".path"                     # Path configuration
-#                     ".bash_prompt"              # Bash prompt
                       ".extra"                    # Misc configurations
                       ".profile"                  # Command prompt
                       ".aliases"                  # Bash aliases
@@ -51,9 +71,9 @@ source ~/.bash-git-prompt/gitprompt.sh
 
 
 # Final processes
-export PATH="$HOME/.cargo/bin:$PATH";
+pathprepend $HOME/.cargo/bin
 
 # Added by Caenbrew.
-export PATH="$HOME/.local/bin:$PATH"
+pathprepend $HOME/.local/bin
 export LD_RUN_PATH="$HOME/.local/lib:$LD_RUN_PATH"
 export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
