@@ -1,14 +1,16 @@
-# SSH Multiplexing
+# Enable SSH Multiplexing
 Host *
   ControlMaster auto
   ControlPath ~/.ssh/master-%r@%h:%p
 
-# SSH Hosts
+# Hosts
 
-Host caen
+# Umich CAEN
+Host caen oncampus 
   HostName oncampus-course.engin.umich.edu
   User ndwill
-
-Host caen-offcampus
+Host offcampus
   HostName login-course-2fa.engin.umich.edu
   User ndwill
+
+

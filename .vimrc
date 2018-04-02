@@ -79,6 +79,7 @@ let g:markdown_syntax_conceal = 0
 " Vim-Markdown preview
 let vim_markdown_preview_github=1
 
+
 " ============================= Interface ==============================
 syntax enable
 set autoindent
