@@ -4,10 +4,10 @@
 # and Mac
 
 read -p "This program will overwrite all relevant dotfiles and directories. \
-  Are you sure you want to continue? [y/n] " BEGIN
+Press any key to continue. " ANYKEY
 
-
-
+# TODO: Have different path if this is on a CAEN computer
+# TODO: Different path if repository is not in the developer directory
 
 pushd ~/                                  # /dotfiles --> /$HOME
 ln -s `pwd`/.vimrc $HOME
@@ -25,24 +25,16 @@ declare -a to_move=(
                     ".profile"
                     )
 
-
-if $overwrite; then
-  for file in "${to_move[@]}"
-  do
-    find "$file" -maxdepth 0 -delete
-    ln -s $HOME/developer/dotfiles/$file $HOME
-  done
-else
-  mkdir $HOME/old-dotfiles
-  for file in "${to_move[@]}"
-  do
-    if find "$file" -maxdepth 0; then
-      mv $HOME/$file $HOME/old-dotfiles/
-    fi
-  done
-fi
+mkdir $HOME/old-dotfiles
+for file in "${to_move[@]}"
+do
+  if find "$file" -maxdepth 0; then
+    mv -v $HOME/$file $HOME/old-dotfiles/
+  fi
+  ln -s $HOME/developer/dotfiles/$file
+done
 
 read -p "Enter the name you would like for this machine (Prompt display): "\
   machine_name
 
-echo "MACHINE_NAME=$machine_name; export MACHINE_NAME" > $HOME/.extra
+echo "export MACHINE_NAME=$machine_name" > $HOME/.extra

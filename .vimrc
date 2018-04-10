@@ -67,6 +67,17 @@ highlight SyntasticWarningLine guibg=#331d1e
 let g:syntastic_cpp_compiler_options = '-std=c++11 -Wconversion -Wall -Werror -Wextra -pedantic'
 " Rust
 let g:syntastic_rust_checkers = ['cargo', 'rustc']
+" Python2.7/3.6
+function Py2()
+  let g:syntastic_python_python_exec = '/usr/local/bin/python2.7'
+endfunction
+
+function Py3()
+  let g:syntastic_python_python_exec = '/usr/local/bin/python3.6'
+endfunction
+
+call Py3() " Default to Py3
+
 
 " Vim-commentary
 "let g:airline_theme='deus'

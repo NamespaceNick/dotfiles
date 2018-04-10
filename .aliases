@@ -10,6 +10,8 @@ alias unity="cd ~/Documents/Unity/1.\ Projects"
 alias dotfiles="cd ~/developer/dotfiles/"
 alias vimrc="vi ~/.vimrc"
 alias learn="vi ~/developer/learn"
+alias py3="python3"
+alias py2="python2.7"
 
 # Easier navigation
 alias ..="cd .."
