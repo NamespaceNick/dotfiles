@@ -3,10 +3,10 @@
 # Installs necessary tools for new environment
 
 os=false
-if uname -a | grep 'ARCH' &> /dev/null ; then
+if uname -a | grep -i 'ARCH' &> /dev/null ; then
   echo "I am on an arch system"
 elif
-  uname -a | grep 'darwin' &> /dev/null ; then
+  uname -a | grep -i 'darwin' &> /dev/null ; then
   echo "I am on a macbook"
 else
   echo "I am not on a macbook or arch system"
