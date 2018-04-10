@@ -6,11 +6,14 @@
 read -p "This program will overwrite all relevant dotfiles and directories. \
 Press any key to continue. " ANYKEY
 
+export DOTFILES_DIR=`pwd`
+
 # TODO: Have different path if this is on a CAEN computer
 # TODO: Different path if repository is not in the developer directory
 
-pushd ~/                                  # /dotfiles --> /$HOME
-ln -s `pwd`/.vimrc $HOME
+pushd $HOME                               # /dotfiles --> /$HOME
+ln -s $DOTFILES_DIR/.vimrc $HOME
+vim +PlugInstall +qall
                                           # TODO: Add the bin directory to the 
                                           # home directory
 git clone \
