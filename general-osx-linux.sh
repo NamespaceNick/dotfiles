@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-# Script to install programs and tools that are necessary for both linux
-# and Mac
-
-read -p "This program will overwrite all relevant dotfiles and directories. \
-Press any key to continue. " ANYKEY
-
 export DOTFILES_DIR=`pwd`
 
 # TODO: Have different path if this is on a CAEN computer
