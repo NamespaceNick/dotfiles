@@ -38,10 +38,10 @@ filetype plugin indent on
 " ============================= Plugin Configs =========================
 
 " Solarized
-set background=dark
-let g:solarized_termcolors=16
-let g:solarized_italic=1
-colorscheme solarized
+" set background=dark
+" let g:solarized_termcolors=16
+" let g:solarized_italic=1
+" colorscheme solarized
 
 let g:livepreview_previewer = 'open -a Preview'
 " Neomake

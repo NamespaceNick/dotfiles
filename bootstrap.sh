@@ -4,10 +4,11 @@
 
 os=false
 if uname -a | grep -i 'ARCH' &> /dev/null ; then
-  echo "I am on an arch system"
-elif
-  uname -a | grep -i 'darwin' &> /dev/null ; then
-  echo "I am on a macbook"
+  echo "OS: Arch Linux"
+elif uname -a | grep -i 'darwin' &> /dev/null ; then
+  echo "OS: MacOS"
+elif uname -a | grep -i 'ubuntu' &> /dev/null ; then
+  echo "OS: Ubuntu Linux"
 else
   echo "I am not on a macbook or arch system"
 fi
