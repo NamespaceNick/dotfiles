@@ -19,6 +19,7 @@ else
   echo "WARNING: UNRECOGNIZED OPERATING SYSTEM. PLEASE TRY AGAIN."
 fi
 
+
 HM_DIR=$HOME
 
 echo -e "Home directory: $HM_DIR\n"
