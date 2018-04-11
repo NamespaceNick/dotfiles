@@ -1,9 +1,18 @@
 #!/usr/bin/env bash
 # Bash configuration for all machines
 
+function prepend_path() {
+  echo [[ ":$PATH:" != *":$1:"* ]] && "PATH=$1:$PATH"
+}
+
+function append_path() {
+  echo [[ ":$PATH:" != *":$1:"* ]] && "PATH=$PATH:$1"
+}
 ###########################################################################
 #                           TOP-LEVEL                                     #
 ###########################################################################
+echo "Append usr/bin: $(append_path /usr/bin)"
+echo "Prepend usr/bin: $(prepend_path /usr/bin)"
 # PATH
 export PATH="$HOME/bin:$PATH"
 export EDITOR="vim"

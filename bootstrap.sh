@@ -6,22 +6,28 @@ export DOT_DIR=`pwd`
 # TODO: Unsure if necessary
 export OS_DOT_DIR=''
 export OP_SYS=''
+
+installation_type=''
 if uname -a | grep -i 'ARCH' &> /dev/null ; then
   echo "OS: Arch Linux"
   OP_SYS=arch
   OS_DOT_DIR=$DOT_DIR/os/arch
+  installation_type=arch_install.sh
 elif uname -a | grep -i 'darwin' &> /dev/null ; then
   echo "OS: MacOS"
   OP_SYS=mac
   OS_DOT_DIR=$DOT_DIR/os/mac
+  installation_type=mac_install.sh
 elif uname -a | grep -i 'ubuntu' &> /dev/null ; then
   echo "OS: Ubuntu Linux"
   OP_SYS=ubuntu
   OS_DOT_DIR=$DOT_DIR/os/ubuntu
+  installation_type=ubuntu_install.sh
 elif uname -a | grep -i 'umich' &> /dev/null ; then
   echo "OS: CAEN (Red Hat Enterprise)"
   OP_SYS=caen
   OS_DOT_DIR=$DOT_DIR/os/caen
+  installation_type=caen_install.sh
 else
   echo "WARNING: UNRECOGNIZED OPERATING SYSTEM. PLEASE TRY AGAIN."
 fi
@@ -35,7 +41,7 @@ while true ; do
 [Y/N]" response
   case $response in
     [Yy]*)
-      source install.sh
+      break 2
       break ;;
 
     [Nn]*)
@@ -46,3 +52,11 @@ while true ; do
       echo "Please enter a letter [Yy/Nn]" ;;
   esac
 done
+
+dotfiles=( .bash_profile .aliases .bash_functions )
+for file in dotfiles
+do
+  ln -sf $DOT_DIR/$file $HM_DIR
+done
+
+source $DOT_DIR/installations/$installation_type
