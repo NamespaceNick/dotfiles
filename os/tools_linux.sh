@@ -20,14 +20,14 @@ apt-get update
 # Git
 if $git ; then
   echo "Installing git.."
-  apt install git
+  sudo apt-get install git
   echo "..Success.."
 fi
 
 # Ncurses
 if $ncurses ; then
   echo "Installing ncurses.."
-  apt-get install ncurses-dev
+  sudo apt-get install ncurses-dev
   echo "..Success.."
 fi
 
