@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 # Bash configuration for all machines
 
+# Prevents duplicates in path
 function prepend_path() {
-  echo [[ ":$PATH:" != *":$1:"* ]] && "PATH=$1:$PATH"
+  [[ ":$PATH:" != *":$1:"* ]] && PATH=$1:$PATH
 }
 
 function append_path() {
-  echo [[ ":$PATH:" != *":$1:"* ]] && "PATH=$PATH:$1"
+  [[ ":$PATH:" != *":$1:"* ]] && PATH=$PATH:$1
 }
 ###########################################################################
 #                           TOP-LEVEL                                     #
 ###########################################################################
-echo "Append usr/bin: $(append_path /usr/bin)"
-echo "Prepend usr/bin: $(prepend_path /usr/bin)"
 # PATH
-export PATH="$HOME/bin:$PATH"
+prepend_path $HOME/bin
+
 export EDITOR="vim"
 
 # Ensure new dotfiles are updated
@@ -62,9 +62,9 @@ fi
 
 
 # Final processes
-export PATH="$HOME/.cargo/bin:$PATH";
+prepend_path "$HOME/.cargo/bin"
 
 # Added by Caenbrew.
-export PATH="$HOME/.local/bin:$PATH"
+prepend_path "$HOME/.local/bin"
 export LD_RUN_PATH="$HOME/.local/lib:$LD_RUN_PATH"
 export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
