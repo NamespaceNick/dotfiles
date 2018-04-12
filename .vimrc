@@ -109,6 +109,10 @@ set smartindent
 set tabstop=2
 set ttyfast
 set wrap
+set clipboard=unnamed
+" Allow a large global buffer
+set viminfo+=<1000
+
 " Python shift/tab widths = 2
 au FileType python setl shiftwidth=2 tabstop=2
 " Rust shift/tab widths = 4
@@ -142,3 +146,6 @@ map -     <C-W>s<C-W><Down>
 " Change cursor to line when in insert mode
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" Copy and paste to system keyboard
+vmap <C-c> :w! ~/.vbuf<CR>
+nmap <C-v> :r ~/.vbuf<CR>
