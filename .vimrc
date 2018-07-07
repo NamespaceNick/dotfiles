@@ -143,9 +143,6 @@ nmap <silent> ,p :SmartPaste<cr>
 map <Tab> <C-W>w
 map <Bar> <C-W>v<C-W><Right>
 map -     <C-W>s<C-W><Down>
-" Change cursor to line when in insert mode
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 " Copy and paste to system keyboard
 vmap <C-c> :w! ~/.vbuf<CR>
 nmap <C-v> :r ~/.vbuf<CR>
