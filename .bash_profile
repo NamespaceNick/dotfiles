@@ -25,14 +25,7 @@ shopt -s cdspell
 HISTSIZE=-1
 
 # `ls` colors
-  # Directories blue # Executables red
-  # Symlinks purple
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  export CLICOLOR=1
-  export LSCOLORS=gxfxhxDxbxhxhxhxhxcxcx
-else
-  LS_COLORS=$LS_COLORS:'di=4;34:ex=0;31:' ; export LS_COLORS
-fi
+LS_COLORS=$LS_COLORS:'di=4;34:ex=0;31:' ; export LS_COLORS
 
 # italics for terminal
 export TERM=xterm-256color-italic
@@ -63,11 +56,5 @@ if [ -f ~/.bash-git-prompt/gitprompt.sh ] ; then
 fi
 
 
-
-# Final processes
-prepend_path "$HOME/.cargo/bin"
-
-# Added by Caenbrew.
-prepend_path "$HOME/.local/bin"
 export LD_RUN_PATH="$HOME/.local/lib:$LD_RUN_PATH"
 export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"

@@ -101,7 +101,6 @@ set wrap
 set clipboard=unnamed
 " Allow a large global buffer
 set viminfo+=<1000
-highlight Comment cterm=italic
 
 " Python shift/tab widths = 2
 au FileType python setl shiftwidth=2 tabstop=2
@@ -116,7 +115,11 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
+highlight Comment cterm=italic
+
 " ============================== Keymappings ==============================
+vnoremap Y :w! ~/.vbuf<CR>
+nnoremap P :r ~/.vbuf<CR>
 " Easier exiting insert mode
 :imap jk <Esc>
 :imap JK <Esc>

@@ -7,6 +7,10 @@ alias portfolio="cd $HOME/developer/portfolio-website/"
 export MACHINE_NAME=Macbook
 export OP_SYS=mac
 
+# Added by Caenbrew.
+prepend_path "$HOME/.local/bin"
+export CLICOLOR=1
+export LSCOLORS=gxfxhxDxbxhxhxhxhxcxcx
 
 # Bash-Git-Prompt location
 if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
