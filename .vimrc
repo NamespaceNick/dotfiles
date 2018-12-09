@@ -17,17 +17,15 @@ endif
 
 call plug#begin()
 
-Plug 'altercation/vim-colors-solarized'
 Plug 'rust-lang/rust.vim'
 Plug 'rust-lang/cargo'
 Plug 'lervag/vimtex'
 Plug 'vim-syntastic/syntastic'
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-markdown'
-Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'mhinz/vim-startify'
 Plug 'cespare/vim-toml'
+Plug 'romainl/flattened'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 call plug#end()
 
@@ -37,13 +35,16 @@ filetype plugin indent on
 
 " ============================= Plugin Configs =========================
 
-" Solarized
-" set background=dark
-" let g:solarized_termcolors=16
-" let g:solarized_italic=1
-" colorscheme solarized
+" flattened theme
+colorscheme flattened_dark
 
-let g:livepreview_previewer = 'open -a Preview'
+
+" vim-cpp-enhanced-highlight
+let g:cpp_class_scope_highlight = 0
+let g:cpp_member_variable_highlight = 0
+let g:cpp_class_decl_highlight = 0
+
+
 " Neomake
 " call neomake#configure#automake('rw', 1000)
 " C++ syntax
@@ -64,7 +65,7 @@ let g:syntastic_enable_signs=1
 highlight SyntasticErrorLine guibg=#550000
 highlight SyntasticWarningLine guibg=#331d1e
 " Cplusplus
-let g:syntastic_cpp_compiler_options = '-std=c++11 -Wconversion -Wall -Werror -Wextra -pedantic'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -Wall -Wno-int-to-void-pointer-cast'
 " Rust
 let g:syntastic_rust_checkers = ['cargo', 'rustc']
 " Python2.7/3.6
@@ -77,18 +78,6 @@ function Py3()
 endfunction
 
 call Py3() " Default to Py3
-
-
-" Vim-commentary
-"let g:airline_theme='deus'
-"let g:Powerline_symbols='unicode'
-
-" Vim-Markdown
-let vim_markdown_preview_browser='Firefox'
-let g:markdown_syntax_conceal = 0
-
-" Vim-Markdown preview
-let vim_markdown_preview_github=1
 
 
 " ============================= Interface ==============================
@@ -143,9 +132,6 @@ nmap <silent> ,p :SmartPaste<cr>
 map <Tab> <C-W>w
 map <Bar> <C-W>v<C-W><Right>
 map -     <C-W>s<C-W><Down>
-" Change cursor to line when in insert mode
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 " Copy and paste to system keyboard
 vmap <C-c> :w! ~/.vbuf<CR>
 nmap <C-v> :r ~/.vbuf<CR>
