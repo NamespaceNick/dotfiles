@@ -7,7 +7,7 @@ alias vi="vim"
 # Core aliases
 alias update="source ~/.bash_profile"
 alias submit370="/afs/umich.edu/class/eecs370/bin/submit370"
-alias dotfiles="cd ~/developer/dotfiles/caen/"
+alias dotfiles="cd ~/developer/dotfiles"
 
 # Easier navigation
 alias ..="cd .."
