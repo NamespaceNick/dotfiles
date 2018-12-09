@@ -34,6 +34,9 @@ else
   LS_COLORS=$LS_COLORS:'di=4;34:ex=0;31:' ; export LS_COLORS
 fi
 
+# italics for terminal
+export TERM=xterm-256color-italic
+
 # Source necessary files
 declare -a sourcing=(
 #                     ".path"                     # Path configuration

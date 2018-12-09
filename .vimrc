@@ -6,6 +6,7 @@
 set nocompatible
 " For plugin manager
 filetype off
+" TODO: 
 
 " Plugins
 " If Vim.plug is not already installed
@@ -79,7 +80,6 @@ endfunction
 
 call Py3() " Default to Py3
 
-
 " ============================= Interface ==============================
 syntax enable
 set autoindent
@@ -101,6 +101,7 @@ set wrap
 set clipboard=unnamed
 " Allow a large global buffer
 set viminfo+=<1000
+highlight Comment cterm=italic
 
 " Python shift/tab widths = 2
 au FileType python setl shiftwidth=2 tabstop=2
