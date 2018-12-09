@@ -114,6 +114,8 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
+highlight Comment cterm=italic
+
 " ============================== Keymappings ==============================
 " Easier exiting insert mode
 :imap jk <Esc>
