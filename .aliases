@@ -20,6 +20,7 @@ alias te="pushd ~/developer/testing/test-files/"
 alias dt="cd ~/Desktop"
 alias dl="cd ~/Downloads"
 alias dv="cd ~/developer"
+alias ls="ls --color=auto"
 
 # Allow aliases to be sudo'ed
 alias sudo='sudo '
