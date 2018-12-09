@@ -1,7 +1,18 @@
-
+# Makefile for dotfiles installations
 install:
 	@bash install.sh
 
+ubuntu:
 
 
-.PHONY: install 
+arch:
+
+
+mac:
+
+
+
+
+
+
+.PHONY: install ubuntu arch mac
