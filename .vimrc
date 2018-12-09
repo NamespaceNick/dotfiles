@@ -65,7 +65,7 @@ let g:syntastic_enable_signs=1
 highlight SyntasticErrorLine guibg=#550000
 highlight SyntasticWarningLine guibg=#331d1e
 " Cplusplus
-let g:syntastic_cpp_compiler_options = '-std=c++11 -Wall -Wno-int-to-void-pointer-cast'
+let g:syntastic_cpp_compiler_options = '-std=c++17 -Wall -Wno-int-to-void-pointer-cast'
 " Rust
 let g:syntastic_rust_checkers = ['cargo', 'rustc']
 " Python2.7/3.6
