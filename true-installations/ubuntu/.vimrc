@@ -36,7 +36,7 @@ filetype plugin indent on
 " ============================= Plugin Configs =========================
 
 " flattened theme
-" colorscheme flattened_dark
+colorscheme flattened_dark
 
 " vim-cpp-enhanced-highlight
 let g:cpp_class_scope_highlight = 0

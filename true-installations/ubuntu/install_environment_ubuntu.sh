@@ -13,3 +13,12 @@ sudo apt-get install vim
 # gconf2
 sudo apt install gconf2
 
+# tmux
+sudo apt install tmux
+pushd $HOME
+git clone -recurse-submodules git@github.com:NicolasDWilliams/.tmux.git
+
+# allow for ssh to home computer
+sudo apt install openssh-client openssh-server net-tools
+
+
