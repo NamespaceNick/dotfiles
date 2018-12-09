@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # Program aliases
-alias tmux="$HOME/bin/tmux"
 alias vimrc="vi ~/.vimrc"
 alias vi="vim"
 
@@ -36,7 +35,7 @@ alias r="rustc "
 
 # Listing
 alias l="ls -a --color=auto"
-alias ls="ls --color=auto"
+alias ls="ls -v --color=auto"
 alias lsa="ls -a --color=auto"
 alias lsl="ls --color=auto -al"
 

@@ -32,10 +32,9 @@ export EDITOR="vim"
 
 # Ensure new dotfiles are updated
 # Bash settings
-shopt -s histappend
 shopt -s nocaseglob
 shopt -s cdspell
-HISTSIZE=-1
+module load gcc/7.1.0
 
 # `ls` colors
   # Directories blue # Executables red

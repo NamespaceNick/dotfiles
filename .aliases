@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
 # Core aliases
-#alias vim="nvim"
-#alias vi="nvim"
 alias caenssh="ssh ndwill@oncampus-course.engin.umich.edu"
 alias update="source ~/.bash_profile"
-alias dotfiles="cd ~/developer/dotfiles/"
+# this needs to be added to each machine's .extra
+# alias dotfiles="cd ~/developer/dotfiles/"
 alias vimrc="vi ~/.vimrc"
 alias py3="python3"
 alias py2="python2.7"
