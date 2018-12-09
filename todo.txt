@@ -1,3 +1,7 @@
+GENERAL QUESTIONS
+  - Is there a way for me to share a PART of a file between files?
+    when making vimrc or .bash_profiles, there are some things that all of my
+    installations do, how can I share those things between installations?
 SCRIPTS TODO
   - linux.sh
   - mac.sh # Applications not with brew
