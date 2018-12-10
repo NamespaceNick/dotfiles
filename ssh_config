@@ -6,7 +6,7 @@ Host *
 # Hosts
 
 # Umich CAEN
-Host caen oncampus 
+Host oncampus 
   HostName oncampus-course.engin.umich.edu
   User ndwill
 Host offcampus

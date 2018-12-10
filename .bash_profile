@@ -16,6 +16,7 @@ function append_path() {
 prepend_path $HOME/bin
 
 export EDITOR="vim"
+export DOTS="$HOME/developer/dotfiles"
 
 # Ensure new dotfiles are updated
 # Bash settings
