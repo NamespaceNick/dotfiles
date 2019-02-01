@@ -3,6 +3,7 @@
 # Random aliases
 alias portfolio="cd $HOME/developer/portfolio-website/"
 alias ls="ls -G"
+alias zelda="cd $HOME/UnityProjects/The\ Legend\ of\ Zelda\ Remake/Assets/Scripts"
 
 # Label for bash prompt
 export MACHINE_NAME=Macbook

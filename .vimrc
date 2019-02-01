@@ -65,10 +65,10 @@ let g:syntastic_enable_highlighting=0
 let g:syntastic_enable_signs=1
 highlight SyntasticErrorLine guibg=#550000
 highlight SyntasticWarningLine guibg=#331d1e
-" Cplusplus
+" Checkers
 let g:syntastic_cpp_compiler_options = '-std=c++17 -Wall -Wno-int-to-void-pointer-cast'
-" Rust
 let g:syntastic_rust_checkers = ['cargo', 'rustc']
+"let g:syntastic_lua_checkers = ['syntastic-checkers-lua', 'luac']
 " Python2.7/3.6
 function Py2()
   let g:syntastic_python_python_exec = '/usr/local/bin/python2.7'
@@ -102,12 +102,13 @@ set clipboard=unnamed
 " Allow a large global buffer
 set viminfo+=<1000
 
-" Python shift/tab widths = 2
+" Language specific shift/tab widths
 au FileType python setl shiftwidth=2 tabstop=2
-" Rust shift/tab widths = 4
 au FileType rust setl shiftwidth=4 tabstop=4
-" Assembly tab widths = 8
 au FileType atlas setl shiftwidth=8 tabstop=8
+au FileType cs setl shiftwidth=4 tabstop=4
+au FileType python setl background=light
+au FileType python colorscheme solarized
 
 " Jump to where you left off when opening a file
 if has("autocmd")

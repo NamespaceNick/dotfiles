@@ -15,3 +15,7 @@ function lazygit() {
   git commit -m "$1"
   git push
 }
+
+function sab() {
+  open http://localhost:8080 http://localhost:8989 http://localhost:7878
+}
