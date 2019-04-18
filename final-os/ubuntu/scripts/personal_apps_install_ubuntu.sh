@@ -8,5 +8,5 @@ sudo add-apt-repository ppa:otto-kesselgulasch/gimp
 sudo apt update
 sudo apt install gimp
 
-# discord
 sudo snap install discord
+sudo snap install spotify
