@@ -44,3 +44,9 @@ ln -s $HOME/.tmux/.tmux.conf $HOME/
 # bash-git-prompt
 git clone https://github.com/magicmonty/bash-git-prompt.git $HOME/.bash-git-prompt --depth=1
 
+# ruby & jekyll
+sudo apt install ruby-full build-essential zlib1g-dev
+echo '# Install Ruby Gems to ~/gems' >> ~/.bash_profile
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bash_profile
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bash_profile
+
