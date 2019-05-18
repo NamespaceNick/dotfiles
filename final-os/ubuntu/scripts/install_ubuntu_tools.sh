@@ -50,3 +50,5 @@ echo '# Install Ruby Gems to ~/gems' >> ~/.bash_profile
 echo 'export GEM_HOME="$HOME/gems"' >> ~/.bash_profile
 echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bash_profile
 
+sudo apt install openssh-server
+
