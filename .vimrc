@@ -27,6 +27,7 @@ Plug 'mhinz/vim-startify'
 Plug 'cespare/vim-toml'
 Plug 'romainl/flattened'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'vim-scripts/Rainbow-Parenthesis'
 
 call plug#end()
 
@@ -85,7 +86,7 @@ syntax enable
 set autoindent
 set backspace=indent,eol,start
 set colorcolumn=80
-set expandtab
+" set expandtab
 set incsearch
 set matchpairs+=<:>
 set number
@@ -116,6 +117,8 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
+let HOMEE=$HOME
+" Finding files in spellbound repository
 highlight Comment cterm=italic
 
 " ============================== Keymappings ==============================
