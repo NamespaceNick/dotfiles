@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-# Things I need to add to the installation
-
-# Create symlink for tmux config
-ln -s -f $HOME/developer/dotfiles/linux/arch/.tmux.conf $HOME
