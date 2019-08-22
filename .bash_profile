@@ -54,7 +54,10 @@ done
 if [ -f ~/.bash-git-prompt/gitprompt.sh ] ; then
 	GIT_PROMPT_ONLY_IN_REPO=1
 	source ~/.bash-git-prompt/gitprompt.sh
+else
+	echo "bash-git-prompt not installed"
 fi
+
 
 
 export LD_RUN_PATH="$HOME/.local/lib:$LD_RUN_PATH"
@@ -67,7 +70,5 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 # Install Ruby Gems to ~/gems' >> ~/.bashrc
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
-
-export PATH
 
 export PATH=/usr/local/opt/ruby/bin:$PATH
