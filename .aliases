@@ -2,7 +2,7 @@
 
 # Core aliases
 alias caenssh="ssh ndwill@oncampus-course.engin.umich.edu"
-alias ctags="`brew --prefix`/bin/ctags"
+# alias ctags="`brew --prefix`/bin/ctags"
 alias update="source ~/.bash_profile"
 alias dotfiles="pushd ~/developer/dotfiles/"
 alias vimrc="vi ~/.vimrc"
@@ -16,11 +16,11 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias te="pushd ~/developer/testing/test-files/"
+alias te="pushd ~/developer/test-files/"
 alias dt="cd ~/Desktop"
 alias dl="cd ~/Downloads"
 alias dv="cd ~/developer"
-# alias ls="ls --color=auto"
+alias ls="ls --color=auto"
 
 # Allow aliases to be sudo'ed
 alias sudo='sudo '
@@ -33,19 +33,19 @@ alias grep='grep --color=auto'
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-# Mac-specific aliases
-if [[ $OP_SYS = mac ]]; then
-  # Proper C++ compilation
-  alias g++='g++ --std=c++1z'
+# # Mac-specific aliases
+# if [[ $OP_SYS = mac ]]; then
+#   # Proper C++ compilation
+#   alias g++='g++ --std=c++1z'
 
-elif [ $OP_SYS = ubuntu ] ; then
-  alias g++='g++ --std=c++11'
-  alias pbcopy='xsel --clipboard --input'
-  alias pbpaste='xsel --clipboard --output'
+# elif [ $OP_SYS = ubuntu ] ; then
+#   alias g++='g++ --std=c++11'
+#   alias pbcopy='xsel --clipboard --input'
+#   alias pbpaste='xsel --clipboard --output'
 
-elif [ $OP_SYS = arch ] ; then
-  alias guion='sudo systemctl start sddm.service'
-  alias guioff='sudo systemctl stop sddm.service'
-else
-  echo "WARNING::Unrecognized OS::`uname -a`"
-fi
+# elif [ $OP_SYS = arch ] ; then
+#   alias guion='sudo systemctl start sddm.service'
+#   alias guioff='sudo systemctl stop sddm.service'
+# else
+#   echo "WARNING::Unrecognized OS::`uname -a`"
+# fi
