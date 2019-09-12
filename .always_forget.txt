@@ -1,3 +1,7 @@
 ### Networking ###
 curl ifconfig.me															# What is my ip address?
 curl ipinfo.io																# What is my ip address?
+nmcli radio wifi on/off												# Turn wifi on and off
+
+## Ubuntu Hotkeys
+
