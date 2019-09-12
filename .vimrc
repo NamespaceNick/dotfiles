@@ -136,10 +136,6 @@ nnoremap P :r ~/.vbuf<CR>
 :nmap <Enter> o<Esc>
 " Smart paste when pasting
 nmap <silent> ,p :SmartPaste<cr>
-" Pane switching
-map <Tab> <C-W>w
-map <Bar> <C-W>v<C-W><Right>
-map -     <C-W>s<C-W><Down>
 " Copy and paste to system keyboard
 vmap <C-c> :w! ~/.vbuf<CR>
 nmap <C-v> :r ~/.vbuf<CR>
