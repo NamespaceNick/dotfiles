@@ -122,8 +122,8 @@ let HOMEE=$HOME
 highlight Comment cterm=italic
 
 " ============================== Keymappings ==============================
-vnoremap Y :w! ~/.vbuf<CR>
-nnoremap P :r ~/.vbuf<CR>
+vnoremap <C-y> :w! ~/.vbuf<CR>
+nnoremap <C-p> :r ~/.vbuf<CR>
 " Easier exiting insert mode
 :imap jk <Esc>
 :imap JK <Esc>
