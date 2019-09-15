@@ -24,6 +24,8 @@ pushd ~/$HOME/developer/
 git clone git@github.com:NicolasDWilliams/test-files.git
 popd
 
+sudo apt update
+
 # Vim
 sudo apt install vim
 
@@ -31,6 +33,8 @@ sudo apt install vim
 sudo apt install tmux
 git clone git@github.com:NicolasDWilliams/.tmux.git $HOME/.tmux/
 ln -s $HOME/.tmux/.tmux.conf $HOME/.tmux.conf
+# Tmux Plugin Manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ##### BASH-GIT-PROMPT
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
@@ -47,3 +51,11 @@ sudo apt install make
 ##### JEKYLL
 sudo apt-get install ruby-full build-essential zlib1g-dev
 gem install jekyll bundler
+
+##### HTML, CSS, JS
+sudo apt install npm
+
+##### c++ dev env
+sudo apt install gcc
+sudo apt install build-essential
+
