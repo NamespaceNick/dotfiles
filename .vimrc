@@ -28,6 +28,7 @@ Plug 'cespare/vim-toml'
 Plug 'romainl/flattened'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-scripts/Rainbow-Parenthesis'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
@@ -109,7 +110,6 @@ au FileType rust setl shiftwidth=4 tabstop=4
 au FileType atlas setl shiftwidth=8 tabstop=8
 au FileType cs setl shiftwidth=4 tabstop=4
 au FileType python setl background=light
-au FileType python colorscheme solarized
 
 " Jump to where you left off when opening a file
 if has("autocmd")
@@ -139,3 +139,20 @@ nmap <silent> ,p :SmartPaste<cr>
 " Copy and paste to system keyboard
 vmap <C-c> :w! ~/.vbuf<CR>
 nmap <C-v> :r ~/.vbuf<CR>
+
+" =========================== Custom Functions ============================
+" Create comment headers
+function CommentHeader(title)
+	let commentString = '##############################################################################'
+	let currLine = line(".")
+	" string lengths
+	let comStrLen = strlen(commentString)
+	let titleStrLen = strlen(a:title)
+	let numHashes = comStrLen - (titleStrLen + 2)
+	" if even number of hashes
+	let evenOddEqualizer = (numHashes % 2) == 0 ? 0 : 1
+	let leftHash = commentString[0:float2nr(numHashes / 2 + evenOddEqualizer - 1)]
+	let rightHash = commentString[0:float2nr(numHashes / 2 - 1)]
+	let middleLine = join([leftHash, toupper(a:title), rightHash])
+	call append(currLine, [commentString, middleLine, commentString])
+endfunction
