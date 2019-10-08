@@ -28,10 +28,12 @@ alias sudo='sudo '
 # Always enable colored `grep` output
 alias grep='grep --color=auto'
 
-# Lock the screen (going AFK)
-
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# vim-plug commands from command line
+alias PlugInstall='vim +PlugInstall +qall'
+alias PlugClean='vim +PlugClean +qall'
 
 # # Mac-specific aliases
 # if [[ $OP_SYS = mac ]]; then

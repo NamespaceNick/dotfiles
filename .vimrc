@@ -21,7 +21,6 @@ call plug#begin()
 Plug 'rust-lang/rust.vim'
 Plug 'rust-lang/cargo'
 Plug 'lervag/vimtex'
-Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-commentary'
 Plug 'mhinz/vim-startify'
 Plug 'cespare/vim-toml'
@@ -29,6 +28,11 @@ Plug 'romainl/flattened'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-scripts/Rainbow-Parenthesis'
 Plug 'mattn/emmet-vim'
+Plug 'scrooloose/nerdtree'
+" python linter
+Plug 'dense-analysis/ale'
+Plug 'vim-python/python-syntax'
+Plug 'psf/black'
 
 call plug#end()
 
@@ -54,32 +58,16 @@ let g:cpp_class_decl_highlight = 0
 let g:neomake_cpp_enable_markers=['g++']
 let g:neomake_cpp_clang_args = ["-std=c++11"]
 
-" Syntastic
-" General settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_enable_highlighting=0
-let g:syntastic_enable_signs=1
-highlight SyntasticErrorLine guibg=#550000
-highlight SyntasticWarningLine guibg=#331d1e
-" Checkers
-let g:syntastic_cpp_compiler_options = '-std=c++17 -Wall -Wno-int-to-void-pointer-cast'
-let g:syntastic_rust_checkers = ['cargo', 'rustc']
-"let g:syntastic_lua_checkers = ['syntastic-checkers-lua', 'luac']
-" Python2.7/3.6
-function Py2()
-  let g:syntastic_python_python_exec = '/usr/local/bin/python2.7'
-endfunction
+" ale python syntax checker
+let g:ale_virtualenv_dir_names = []
+let g:ale_fixers = {'python': ['black', 'trim_whitespace', 'remove_trailing_lines', 'isort']}
+let g:ale_fix_on_save = 1
 
 function Py3()
   let g:syntastic_python_python_exec = '/usr/local/bin/python3.6'
 endfunction
 
+" TODO: Add python syntax highlighting for f-strings
 call Py3() " Default to Py3
 
 " ============================= Interface ==============================
@@ -105,11 +93,10 @@ set clipboard=unnamed
 set viminfo+=<1000
 
 " Language specific shift/tab widths
-au FileType python setl shiftwidth=2 tabstop=2
+" au FileType python setl shiftwidth=2 tabstop=2
 au FileType rust setl shiftwidth=4 tabstop=4
 au FileType atlas setl shiftwidth=8 tabstop=8
 au FileType cs setl shiftwidth=4 tabstop=4
-au FileType python setl background=light
 
 " Jump to where you left off when opening a file
 if has("autocmd")
@@ -120,6 +107,11 @@ endif
 let HOMEE=$HOME
 " Finding files in spellbound repository
 highlight Comment cterm=italic
+
+"#############################################################################
+"############################ SYNTAX HIGHLIGHTING ############################
+"#############################################################################
+let g:python_highlight_all = 1
 
 " ============================== Keymappings ==============================
 vnoremap <C-y> :w! ~/.vbuf<CR>
@@ -139,6 +131,7 @@ nmap <silent> ,p :SmartPaste<cr>
 " Copy and paste to system keyboard
 vmap <C-c> :w! ~/.vbuf<CR>
 nmap <C-v> :r ~/.vbuf<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 " =========================== Custom Functions ============================
 " Create comment headers
