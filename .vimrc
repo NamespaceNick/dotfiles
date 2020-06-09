@@ -132,6 +132,11 @@ nmap <silent> ,p :SmartPaste<cr>
 vmap <C-c> :w! ~/.vbuf<CR>
 nmap <C-v> :r ~/.vbuf<CR>
 map <C-n> :NERDTreeToggle<CR>
+" Control + Backspace deletes word-by-word
+imap <C-BS> <C-W> 
+noremap! <C-BS> <C-w>
+noremap! <C-h> <C-w>
+
 
 " =========================== Custom Functions ============================
 " Create comment headers

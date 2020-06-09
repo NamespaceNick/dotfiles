@@ -4,6 +4,7 @@
 declare -a core_tools
 core_tools=(
 	"g++"
+	"make"
 )
 
 for tool in ${core_tools[@]}
