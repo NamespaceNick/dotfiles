@@ -5,12 +5,13 @@ export DOTFILE_PATH="$HOME/developer/dotfiles"
 
 declare -a dotfiles
 dotfiles=(
-	".aliases"
-	".bash_functions"
-	".bash_profile"
-	".bashrc"
-	".profile"
-	".vimrc"
+	.aliases
+	.always_forget
+	.bash_functions
+	.bash_profile
+	.bashrc
+	.profile
+	.vimrc
 )
 # Bash files
 # Create symlinks

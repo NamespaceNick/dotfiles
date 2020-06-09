@@ -9,6 +9,8 @@ install_scripts=(
 	move_dotfiles.sh
 	terminal_setup.sh
 	personal_repositories.sh
+	tmux_setup.sh
+	python_setup.sh
 )
 
 for script in ${install_scripts[@]}
