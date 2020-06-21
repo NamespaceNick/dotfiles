@@ -9,6 +9,15 @@ function prepend_path() {
 function append_path() {
   [[ ":$PATH:" != *":$1:"* ]] && PATH=$PATH:$1
 }
+
+function sv() {
+	source venv/bin/activate &&
+		tmux set-environment VIRTUAL_ENV $VIRTUAL_ENV
+}
+if [ -n "$VIRTUAL_ENV" ]; then
+	source $VIRTUAL_ENV/bin/activate;
+fi
+
 ###########################################################################
 #                           TOP-LEVEL                                     #
 ###########################################################################
