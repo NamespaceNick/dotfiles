@@ -11,7 +11,7 @@ function append_path() {
 }
 
 function sv() {
-	source venv/bin/activate &&
+	source env/bin/activate &&
 		tmux set-environment VIRTUAL_ENV $VIRTUAL_ENV
 }
 if [ -n "$VIRTUAL_ENV" ]; then
