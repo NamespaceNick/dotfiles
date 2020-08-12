@@ -18,13 +18,10 @@ endif
 
 call plug#begin()
 
-Plug 'rust-lang/rust.vim'
-Plug 'rust-lang/cargo'
-Plug 'lervag/vimtex'
 Plug 'tpope/vim-commentary'
 Plug 'mhinz/vim-startify'
 Plug 'cespare/vim-toml'
-Plug 'romainl/flattened'
+" Plug 'romainl/flattened'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-scripts/Rainbow-Parenthesis'
 Plug 'mattn/emmet-vim'
@@ -43,7 +40,7 @@ filetype plugin indent on
 " ============================= Plugin Configs =========================
 
 " flattened theme
-colorscheme flattened_dark
+" colorscheme flattened_dark
 
 
 " vim-cpp-enhanced-highlight
