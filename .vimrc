@@ -26,6 +26,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-scripts/Rainbow-Parenthesis'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdtree'
+Plug 'Glench/Vim-Jinja2-Syntax'
 " python linter
 Plug 'dense-analysis/ale'
 Plug 'vim-python/python-syntax'
