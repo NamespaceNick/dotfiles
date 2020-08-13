@@ -7,4 +7,4 @@ fi
   # <\n>
   # <[machine name]> <pwd-yellow>
   # <→ >
-export PS1="\n[$MACHINE_NAME] \[\e[33m\]\w\[\e[m\] \n→ "
+export PS1="\n[$USER @ $MACHINE_NAME] \[\e[33m\]\w\[\e[m\] \n→ "

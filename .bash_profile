@@ -26,10 +26,12 @@ shopt -s cdspell
 HISTSIZE=-1
 
 # `ls` colors
-LS_COLORS=$LS_COLORS:'di=4;34:ex=0;31:' ; export LS_COLORS
+LS_COLORS=$LS_COLORS:'di=1;33:ex=0;31:' ; export LS_COLORS
 
 # italics for terminal
-export TERM=xterm-256color-italic
+# TODO: Need to add to other extra files
+# export TERM=xterm-256color-italic
+# export TERM=xterm-256color
 
 # Source necessary files
 declare -a sourcing=(

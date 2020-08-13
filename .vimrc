@@ -25,6 +25,7 @@ Plug 'tpope/vim-commentary'
 Plug 'mhinz/vim-startify'
 Plug 'cespare/vim-toml'
 Plug 'romainl/flattened'
+Plug 'micha/vim-colors-solarized'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-scripts/Rainbow-Parenthesis'
 Plug 'mattn/emmet-vim'
@@ -32,7 +33,7 @@ Plug 'scrooloose/nerdtree'
 " python linter
 Plug 'dense-analysis/ale'
 Plug 'vim-python/python-syntax'
-Plug 'psf/black'
+" Plug 'psf/black'
 
 call plug#end()
 
@@ -43,7 +44,10 @@ filetype plugin indent on
 " ============================= Plugin Configs =========================
 
 " flattened theme
-colorscheme flattened_dark
+" colorscheme flattened_dark
+" account for terminal colorscheme
+colorscheme solarized
+set background=dark
 
 
 " vim-cpp-enhanced-highlight
@@ -104,8 +108,6 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
-let HOMEE=$HOME
-" Finding files in spellbound repository
 highlight Comment cterm=italic
 
 "#############################################################################

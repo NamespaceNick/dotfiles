@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# atlassian aliases
+alias startjira="sudo bash /opt/atlassian/jira/bin/start-jira.sh"
+alias stopjira="sudo bash /opt/atlassian/jira/bin/stop-jira.sh"
+
 # Core aliases
 alias caenssh="ssh ndwill@oncampus-course.engin.umich.edu"
 # alias ctags="`brew --prefix`/bin/ctags"
