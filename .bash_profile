@@ -9,6 +9,16 @@ function prepend_path() {
 function append_path() {
   [[ ":$PATH:" != *":$1:"* ]] && PATH=$PATH:$1
 }
+
+# Preserve virtual environment in new tmux windows/panes
+function sv() {
+	source env/bin/activate &&
+		tmux set-environment VIRTUAL_ENV $VIRTUAL_ENV
+}
+if [ -n "$VIRTUAL_ENV" ]; then
+	source $VIRTUAL_ENV/bin/activate;
+fi
+
 ###########################################################################
 #                           TOP-LEVEL                                     #
 ###########################################################################
