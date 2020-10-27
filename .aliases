@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Determine OS for OS-specific aliases
 
 # atlassian aliases
 alias startjira="sudo bash /opt/atlassian/jira/bin/start-jira.sh"
@@ -24,7 +25,6 @@ alias te="pushd ~/developer/test-files/"
 alias dt="cd ~/Desktop"
 alias dl="cd ~/Downloads"
 alias dv="cd ~/developer"
-alias ls="ls --color=auto"
 
 # Allow aliases to be sudo'ed
 alias sudo='sudo '
@@ -40,6 +40,11 @@ alias PlugInstall='vim +PlugInstall +qall'
 alias PlugClean='vim +PlugClean +qall'
 
 # # Mac-specific aliases
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	alias ls="ls -G"
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+	alias ls="ls --color=auto"
+fi
 # if [[ $OP_SYS = mac ]]; then
 #   # Proper C++ compilation
 #   alias g++='g++ --std=c++1z'

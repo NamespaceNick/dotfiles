@@ -33,7 +33,7 @@ export DOTS="$HOME/developer/dotfiles"
 shopt -s histappend
 shopt -s nocaseglob
 shopt -s cdspell
-HISTSIZE=-1
+HISTSIZE=1000
 
 # `ls` colors
 LS_COLORS=$LS_COLORS:'di=1;33:ex=0;31:' ; export LS_COLORS
