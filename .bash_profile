@@ -36,7 +36,11 @@ shopt -s cdspell
 HISTSIZE=1000
 
 # `ls` colors
-LS_COLORS=$LS_COLORS:'di=1;33:ex=0;31:' ; export LS_COLORS
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	LS_COLORS=$LS_COLORS:'di=1;33:ex=0;31:' ; export LS_COLORS
+else
+	LS_COLORS=$LS_COLORS:'di=4;34:ex=0;31:' ; export LS_COLORS
+fi
 
 # italics for terminal
 # TODO: Need to add to other extra files
