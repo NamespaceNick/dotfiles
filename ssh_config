@@ -6,10 +6,6 @@ Host *
 ### Hosts ###
 
 # Umich CAEN
-Host oncampus 
-  HostName oncampus-course.engin.umich.edu
-  User ndwill
-
-Host offcampus
-  HostName login-course-2fa.engin.umich.edu
+Host studio
+  HostName studio.eecs.umich.edu
   User ndwill
