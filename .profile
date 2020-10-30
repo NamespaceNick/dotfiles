@@ -7,4 +7,11 @@ fi
   # <\n>
   # <[machine name]> <pwd-yellow>
   # <→ >
-export PS1="\n[$USER @ $MACHINE_NAME] \[\e[33m\]\w\[\e[m\] \n→ "
+
+# Check if currently in a virtual environment
+
+if [[ "$VIRTUAL_ENV" != "" ]]; then
+	export PS1="\n(\[\033[0;34m\]env\[\033[0;0m\]) [$USER @ $MACHINE_NAME] \[\e[33m\]\w\[\e[m\] \n→ "
+else
+	export PS1="\n[$USER @ $MACHINE_NAME] \[\e[33m\]\w\[\e[m\] \n→ "
+fi

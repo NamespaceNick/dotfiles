@@ -14,6 +14,7 @@ function append_path() {
 function sv() {
 	source env/bin/activate &&
 		tmux set-environment VIRTUAL_ENV $VIRTUAL_ENV
+	source ~/.profile
 }
 if [ -n "$VIRTUAL_ENV" ]; then
 	source $VIRTUAL_ENV/bin/activate;
@@ -73,7 +74,6 @@ if [ -f ~/.bash-git-prompt/gitprompt.sh ] ; then
 else
 	echo "bash-git-prompt not installed"
 fi
-
 
 
 export LD_RUN_PATH="$HOME/.local/lib:$LD_RUN_PATH"
