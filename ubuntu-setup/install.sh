@@ -2,6 +2,8 @@
 # Run all bash installation scripts
 # NOTE: use the source command on this file
 
+sudo apt update
+
 declare -a install_scripts
 install_scripts=(
 	prerequisites.sh

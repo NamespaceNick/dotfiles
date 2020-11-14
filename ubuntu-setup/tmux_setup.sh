@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # install tmux, setup custom tmux configuration
-sudo apt install tmux
+sudo apt install -y tmux
 git clone git@github.com:NicolasDWilliams/.tmux.git $HOME/.tmux/
 ln -s $HOME/.tmux/.tmux.conf $HOME/.tmux.conf
 

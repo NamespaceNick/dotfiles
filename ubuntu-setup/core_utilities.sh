@@ -9,5 +9,5 @@ core_tools=(
 
 for tool in ${core_tools[@]}
 do
-	sudo apt install $tool
+	sudo apt install -y $tool
 done
