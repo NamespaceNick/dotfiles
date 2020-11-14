@@ -22,13 +22,10 @@ done
 
 source $HOME/.bash_profile
 
+mkdir -p $HOME/.ssh
+ln -sf "$DOTFILE_PATH"/ssh_config "$HOME"/.ssh/config
+
 # Vim setup (& install / run vim-plug)
-
-
-
-# Tmux files
-
-
 
 
 # TODO: Setup the extra files
