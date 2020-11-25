@@ -8,3 +8,6 @@
 
 ################################### JEKYLL ###################################
 gem install jekyll bundler
+
+
+brew install git-secret
