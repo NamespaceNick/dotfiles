@@ -76,7 +76,7 @@ call Py3() " Default to Py3
 syntax enable
 set autoindent
 set backspace=indent,eol,start
-set colorcolumn=80
+set colorcolumn=88
 " set expandtab
 set incsearch
 set matchpairs+=<:>
