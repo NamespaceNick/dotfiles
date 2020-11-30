@@ -91,5 +91,5 @@ export PATH=/usr/local/opt/ruby/bin:$PATH
 
 # pyenv installation
 export PYENV_ROOT="$HOME/.pyenv"
-prepend_path "$PYENV_ROOT/bin:$PATH"
+prepend_path "$PYENV_ROOT/bin"
 eval "$(pyenv init -)"

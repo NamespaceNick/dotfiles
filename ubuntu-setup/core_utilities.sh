@@ -6,6 +6,7 @@ core_tools=(
 	"g++"
 	"make"
 	"git-secret"
+	"ripgrep"
 )
 
 for tool in ${core_tools[@]}

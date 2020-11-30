@@ -28,4 +28,5 @@ ln -sf "$DOTFILE_PATH"/ssh_config "$HOME"/.ssh/config
 # Vim setup (& install / run vim-plug)
 
 
-# TODO: Setup the extra files
+# Clone relevant repositories
+git clone git://github.com/yyuu/pyenv.git "$HOME/.pyenv"
