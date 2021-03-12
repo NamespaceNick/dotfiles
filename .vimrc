@@ -93,6 +93,7 @@ set wrap
 set clipboard=unnamed
 " Allow a large global buffer
 set viminfo+=<1000
+set visualbell "Disable Windows terminal bell
 
 " Language specific shift/tab widths
 " au FileType python setl shiftwidth=2 tabstop=2
