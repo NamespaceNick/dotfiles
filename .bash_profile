@@ -68,9 +68,10 @@ done
 #                             PLUGINS                                     #
 ###########################################################################
 
-if [ -f ~/.bash-git-prompt/gitprompt.sh ] ; then
-	GIT_PROMPT_ONLY_IN_REPO=1
-	source ~/.bash-git-prompt/gitprompt.sh
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+  GIT_PROMPT_ONLY_IN_REPO=1
+  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
 else
 	echo "bash-git-prompt not installed"
 fi
@@ -86,10 +87,12 @@ export LESS="$LESS -R -Q" # Disable Windows terminal bell when using `less`
 PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 
 # Install Ruby Gems to ~/gems' >> ~/.bashrc
+# TODO: Check if Ruby is installed
 export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
+prepend_path "$HOME/gems/bin"
+prepend_path "/usr/local/opt/ruby/bin"
 
-export PATH=/usr/local/opt/ruby/bin:$PATH
+prepend_path "/opt/homebrew/bin"
 
 # pyenv installation
 export PYENV_ROOT="$HOME/.pyenv"
