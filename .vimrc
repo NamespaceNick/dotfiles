@@ -44,8 +44,8 @@ filetype plugin indent on
 " flattened theme
 " colorscheme flattened_dark
 " account for terminal colorscheme
-" colorscheme solarized
-" set background=dark
+colorscheme solarized
+set background=dark
 
 
 " vim-cpp-enhanced-highlight

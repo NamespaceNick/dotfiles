@@ -7,3 +7,4 @@ brew update
 
 # Install bash-git-prompt
 brew install bash-git-prompt
+brew install pyenv

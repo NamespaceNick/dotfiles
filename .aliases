@@ -1,30 +1,15 @@
 #!/usr/bin/env bash
 # Determine OS for OS-specific aliases
 
-# atlassian aliases
-alias startjira="sudo bash /opt/atlassian/jira/bin/start-jira.sh"
-alias stopjira="sudo bash /opt/atlassian/jira/bin/stop-jira.sh"
-
-# Core aliases
-alias caenssh="ssh ndwill@oncampus-course.engin.umich.edu"
 # alias ctags="`brew --prefix`/bin/ctags"
 alias update="source ~/.bash_profile"
 alias dotfiles="pushd ~/developer/dotfiles/"
 alias vimrc="vi ~/.vimrc"
-alias dev="pushd ~/developer/"
 alias py3="python3"
 alias py2="python2.7"
 
 # Easier navigation
-alias dc="cd .."
 alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias te="pushd ~/developer/test-files/"
-alias dt="cd ~/Desktop"
-alias dl="cd ~/Downloads"
-alias dv="cd ~/developer"
 
 # Allow aliases to be sudo'ed
 alias sudo='sudo '
