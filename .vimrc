@@ -61,8 +61,12 @@ let g:neomake_cpp_enable_markers=['g++']
 let g:neomake_cpp_clang_args = ["-std=c++11"]
 
 " ale python syntax checker
-let g:ale_virtualenv_dir_names = []
-let g:ale_fixers = {'python': ['black', 'trim_whitespace', 'remove_trailing_lines', 'isort']}
+let g:ale_virtualenv_dir_names = ["env"]
+let g:ale_linters = { 'python': ['flake8'] }
+
+
+let g:ale_fixers = { 'python': ['black', 'trim_whitespace', 'remove_trailing_lines', 'isort'] }
+
 let g:ale_fix_on_save = 1
 
 function Py3()
