@@ -32,6 +32,7 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'dense-analysis/ale'
 Plug 'vim-python/python-syntax'
 " Plug 'psf/black'
+Plug 'vim-test/vim-test'
 
 call plug#end()
 
@@ -63,6 +64,7 @@ let g:neomake_cpp_clang_args = ["-std=c++11"]
 " ale python syntax checker
 let g:ale_virtualenv_dir_names = ["env"]
 let g:ale_linters = { 'python': ['flake8'] }
+let g:ale_python_flake8_options = '--max-line-length=88'
 
 
 let g:ale_fixers = { 'python': ['black', 'trim_whitespace', 'remove_trailing_lines', 'isort'] }
@@ -105,6 +107,14 @@ au FileType rust setl shiftwidth=4 tabstop=4
 au FileType atlas setl shiftwidth=8 tabstop=8
 au FileType cs setl shiftwidth=4 tabstop=4
 
+" FORMATTERS (REQUIRES PRETTIER via 'npm install -g prettier')
+au FileType javascript setlocal formatprg=prettier
+au FileType javascript.jsx setlocal formatprg=prettier
+au FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+au FileType html setlocal formatprg=js-beautify\ --type\ html
+au FileType scss setlocal formatprg=prettier\ --parser\ css
+au FileType css setlocal formatprg=prettier\ --parser\ css
+
 " Jump to where you left off when opening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -144,7 +154,7 @@ noremap! <C-h> <C-w>
 
 
 " =========================== Custom Functions ============================
-" Create comment headers
+" Create comment headers (triple lined comment surrounded by # symbol
 function CommentHeader(title)
 	let commentString = '##############################################################################'
 	let currLine = line(".")
