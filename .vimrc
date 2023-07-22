@@ -129,6 +129,11 @@ highlight Comment cterm=italic
 let g:python_highlight_all = 1
 
 " ============================== Keymappings ==============================
+" nmap means 'map a key sequence when in normal mode' (see vim's docs).
+" <silent> tells vim to show no message when this key sequence is used.
+" <leader> means the key sequence starts with the character assigned to
+" variable mapleader -- a backslash, if no let mapleader = statement has
+" executed yet at the point nmap executes.
 vnoremap <C-y> :w! ~/.vbuf<CR>
 nnoremap <C-p> :r ~/.vbuf<CR>
 " Easier exiting insert mode
@@ -151,6 +156,11 @@ map <C-n> :NERDTreeToggle<CR>
 imap <C-BS> <C-W> 
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
+" vim-test shortcuts
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>l :TestLast<CR>
+
 
 
 " =========================== Custom Functions ============================
